@@ -30,6 +30,8 @@ namespace AppErrorForm
         private void dlgShowExeptions_Load(object sender, EventArgs e)
         {
             this.Text = "Что-то пошло не так...";
+            this.AutoSize = false;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
 
 
         }
