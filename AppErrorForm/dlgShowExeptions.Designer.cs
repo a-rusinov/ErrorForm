@@ -46,6 +46,8 @@
             // 
             // textBoxExSource
             // 
+            this.textBoxExSource.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.textBoxExSource.Enabled = false;
             this.textBoxExSource.Location = new System.Drawing.Point(0, 0);
             this.textBoxExSource.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxExSource.Multiline = true;
@@ -56,6 +58,7 @@
             // 
             // textBoxExMessage
             // 
+            this.textBoxExMessage.Enabled = false;
             this.textBoxExMessage.Location = new System.Drawing.Point(0, 59);
             this.textBoxExMessage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxExMessage.Multiline = true;
