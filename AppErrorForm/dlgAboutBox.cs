@@ -101,5 +101,14 @@ namespace AppErrorForm
             }
         }
         #endregion
+
+        private void dlgAboutBox_Load(object sender, EventArgs e)
+        {
+            this.Text = "О программе...";
+            this.AutoSize = false;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MinimizeBox = false;
+            this.MaximizeBox = false;
+        }
     }
 }

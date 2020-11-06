@@ -29,53 +29,59 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.labelExSource = new System.Windows.Forms.Label();
-            this.labelExSteck = new System.Windows.Forms.Label();
-            this.labelExMessage = new System.Windows.Forms.Label();
+            this.textBoxExSource = new System.Windows.Forms.TextBox();
+            this.textBoxExMessage = new System.Windows.Forms.TextBox();
+            this.textBoxExSteck = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(544, 357);
+            this.button1.Location = new System.Drawing.Point(534, 358);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 33);
+            this.button1.Size = new System.Drawing.Size(100, 32);
             this.button1.TabIndex = 0;
             this.button1.Text = "Закрыть";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // labelExSource
+            // textBoxExSource
             // 
-            this.labelExSource.AutoSize = true;
-            this.labelExSource.Location = new System.Drawing.Point(13, 13);
-            this.labelExSource.Name = "labelExSource";
-            this.labelExSource.Size = new System.Drawing.Size(0, 20);
-            this.labelExSource.TabIndex = 1;
+            this.textBoxExSource.Location = new System.Drawing.Point(0, 0);
+            this.textBoxExSource.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxExSource.Multiline = true;
+            this.textBoxExSource.Name = "textBoxExSource";
+            this.textBoxExSource.ReadOnly = true;
+            this.textBoxExSource.Size = new System.Drawing.Size(148, 29);
+            this.textBoxExSource.TabIndex = 1;
             // 
-            // labelExSteck
+            // textBoxExMessage
             // 
-            this.labelExSteck.AutoSize = true;
-            this.labelExSteck.Location = new System.Drawing.Point(12, 87);
-            this.labelExSteck.Name = "labelExSteck";
-            this.labelExSteck.Size = new System.Drawing.Size(0, 20);
-            this.labelExSteck.TabIndex = 2;
+            this.textBoxExMessage.Location = new System.Drawing.Point(0, 59);
+            this.textBoxExMessage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxExMessage.Multiline = true;
+            this.textBoxExMessage.Name = "textBoxExMessage";
+            this.textBoxExMessage.ReadOnly = true;
+            this.textBoxExMessage.Size = new System.Drawing.Size(148, 29);
+            this.textBoxExMessage.TabIndex = 4;
             // 
-            // labelExMessage
+            // textBoxExSteck
             // 
-            this.labelExMessage.AutoSize = true;
-            this.labelExMessage.Location = new System.Drawing.Point(12, 226);
-            this.labelExMessage.Name = "labelExMessage";
-            this.labelExMessage.Size = new System.Drawing.Size(0, 20);
-            this.labelExMessage.TabIndex = 3;
+            this.textBoxExSteck.Location = new System.Drawing.Point(0, 293);
+            this.textBoxExSteck.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxExSteck.Multiline = true;
+            this.textBoxExSteck.Name = "textBoxExSteck";
+            this.textBoxExSteck.ReadOnly = true;
+            this.textBoxExSteck.Size = new System.Drawing.Size(148, 29);
+            this.textBoxExSteck.TabIndex = 5;
             // 
             // dlgShowExeptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 392);
-            this.Controls.Add(this.labelExMessage);
-            this.Controls.Add(this.labelExSteck);
-            this.Controls.Add(this.labelExSource);
+            this.Controls.Add(this.textBoxExSteck);
+            this.Controls.Add(this.textBoxExMessage);
+            this.Controls.Add(this.textBoxExSource);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -90,8 +96,8 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        public System.Windows.Forms.Label labelExSource;
-        public System.Windows.Forms.Label labelExSteck;
-        public System.Windows.Forms.Label labelExMessage;
+        public System.Windows.Forms.TextBox textBoxExSource;
+        public System.Windows.Forms.TextBox textBoxExMessage;
+        public System.Windows.Forms.TextBox textBoxExSteck;
     }
 }

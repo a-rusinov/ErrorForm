@@ -49,9 +49,33 @@ namespace AppErrorForm
             {
 
                 dlgShowExeptions dlgShowExeptions = new dlgShowExeptions();
-                dlgShowExeptions.labelExMessage.Text = EX.Message;
-                dlgShowExeptions.labelExSource.Text = EX.Source;
-                dlgShowExeptions.labelExSteck.Text = EX.StackTrace;
+
+                dlgShowExeptions.Text = "Что-то пошло не так...";
+                dlgShowExeptions.AutoSize = false;
+                dlgShowExeptions.FormBorderStyle = FormBorderStyle.FixedDialog;
+                dlgShowExeptions.MaximizeBox = false;
+
+
+                dlgShowExeptions.textBoxExMessage.AutoSize = true;
+                dlgShowExeptions.textBoxExMessage.Multiline = true;
+                dlgShowExeptions.textBoxExMessage.WordWrap = true;
+                dlgShowExeptions.textBoxExMessage.ReadOnly = true;
+
+                dlgShowExeptions.textBoxExSource.AutoSize = true;
+                dlgShowExeptions.textBoxExSource.Multiline = true;
+                dlgShowExeptions. textBoxExSource.WordWrap = true;
+                dlgShowExeptions.textBoxExSource.ReadOnly = true;
+
+                dlgShowExeptions.textBoxExSteck.AutoSize = true;
+                dlgShowExeptions.textBoxExSteck.Multiline = true;
+                dlgShowExeptions.textBoxExSteck.WordWrap = true;
+                dlgShowExeptions.textBoxExSteck.ReadOnly = true;
+
+
+
+                dlgShowExeptions.textBoxExMessage.Text = EX.Message;
+                dlgShowExeptions.textBoxExSource.Text = EX.Source;
+                dlgShowExeptions.textBoxExSteck.Text = EX.StackTrace;
                 dlgShowExeptions.ShowDialog();
             }
            

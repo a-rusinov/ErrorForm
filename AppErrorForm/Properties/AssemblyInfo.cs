@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанных со сборкой.
-[assembly: AssemblyTitle("AppErrorForm")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Форма сведений о возникшем исключении")]
+[assembly: AssemblyDescription("Отображение Формы сведений о возникшем исключении в прорамме")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("AppErrorForm")]
+[assembly: AssemblyProduct("Форма сведений о возникшем исключении")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("it-earth.ru")]
 [assembly: AssemblyCulture("")]
 
 // Установка значения False для параметра ComVisible делает типы в этой сборке невидимыми
