@@ -34,55 +34,12 @@ namespace AppErrorForm
             this.AutoSize = false;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-
-
-            textBoxExMessage.AutoSize = true;
-            textBoxExMessage.Multiline = true;
-            textBoxExMessage.WordWrap = true;
-            textBoxExMessage.ReadOnly = true;
-
-            textBoxExSource.AutoSize = true;
-            textBoxExSource.Multiline = true;
-            textBoxExSource.WordWrap = true;
-            textBoxExSource.ReadOnly = true;
-
-            textBoxExSteck.AutoSize = true;
-            textBoxExSteck.Multiline = true;
-            textBoxExSteck.WordWrap = true;
-            textBoxExSteck.ReadOnly = true;
-            this.Text = "Что-то пошло не так...";
-
-            this.AutoSize = false;
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-                        
-
-            textBoxExMessage.AutoSize = true;
-            textBoxExMessage.Multiline = true;
-            textBoxExMessage.WordWrap = true;
-            textBoxExMessage.ReadOnly = true;
-
-            textBoxExSource.AutoSize = true;
-            textBoxExSource.Multiline = true;
-            textBoxExSource.WordWrap = true;
-            textBoxExSource.ReadOnly = true;
-
-            textBoxExSteck.AutoSize = true;
-            textBoxExSteck.Multiline = true;
-            textBoxExSteck.WordWrap = true;
-            textBoxExSteck.ReadOnly = true;
-
-
-
-
-
-
+                
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
-            this.Dispose();
+                
         }
     }
 }

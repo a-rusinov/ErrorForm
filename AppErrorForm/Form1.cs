@@ -50,27 +50,21 @@ namespace AppErrorForm
 
                 dlgShowExeptions dlgShowExeptions = new dlgShowExeptions();
 
-                dlgShowExeptions.Text = "Что-то пошло не так...";
-                dlgShowExeptions.AutoSize = false;
-                dlgShowExeptions.FormBorderStyle = FormBorderStyle.FixedDialog;
-                dlgShowExeptions.MaximizeBox = false;
+                Graphics gr = dlgShowExeptions.textBoxExSteck.CreateGraphics();
+                SizeF size = new SizeF();
 
+                using (gr)
+                {
+                    //получаем размер прямоугольника под строку
+                    size = gr.MeasureString(EX.StackTrace, dlgShowExeptions.textBoxExMessage.Font, dlgShowExeptions.Width);
+                    size = gr.MeasureString(EX.StackTrace, dlgShowExeptions.textBoxExSource.Font, dlgShowExeptions.Width);
+                    size = gr.MeasureString(EX.StackTrace, dlgShowExeptions.textBoxExSteck.Font, dlgShowExeptions.Width);
+                }
 
-                dlgShowExeptions.textBoxExMessage.AutoSize = true;
-                dlgShowExeptions.textBoxExMessage.Multiline = true;
-                dlgShowExeptions.textBoxExMessage.WordWrap = true;
-                dlgShowExeptions.textBoxExMessage.ReadOnly = true;
-
-                dlgShowExeptions.textBoxExSource.AutoSize = true;
-                dlgShowExeptions.textBoxExSource.Multiline = true;
-                dlgShowExeptions. textBoxExSource.WordWrap = true;
-                dlgShowExeptions.textBoxExSource.ReadOnly = true;
-
-                dlgShowExeptions.textBoxExSteck.AutoSize = true;
-                dlgShowExeptions.textBoxExSteck.Multiline = true;
-                dlgShowExeptions.textBoxExSteck.WordWrap = true;
-                dlgShowExeptions.textBoxExSteck.ReadOnly = true;
-
+                //устанавливаем размер TextBox
+                dlgShowExeptions.textBoxExMessage.Size = new Size((int)size.Width, (int)size.Height + dlgShowExeptions.textBoxExMessage.Font.Height); //высота с запасом 	в одну строку под верхний и нижний отступ
+                dlgShowExeptions.textBoxExSource.Size = new Size((int)size.Width, (int)size.Height + dlgShowExeptions.textBoxExSource.Font.Height); //высота с запасом 	в одну строку под верхний и нижний отступ
+                dlgShowExeptions.textBoxExSteck.Size = new Size((int)size.Width, (int)size.Height + dlgShowExeptions.textBoxExSteck.Font.Height); //высота с запасом 	в одну строку под верхний и нижний отступ
 
 
                 dlgShowExeptions.textBoxExMessage.Text = EX.Message;
@@ -78,7 +72,7 @@ namespace AppErrorForm
                 dlgShowExeptions.textBoxExSteck.Text = EX.StackTrace;
                 dlgShowExeptions.ShowDialog();
             }
-           
+            // System.Diagnostics.Process.Start("mailto:admin@example.com&body="+ System.Net.WebUtility.UrlEncode(EX.Message));
         }
 
         private void buttonAppClose_Click(object sender, EventArgs e)
